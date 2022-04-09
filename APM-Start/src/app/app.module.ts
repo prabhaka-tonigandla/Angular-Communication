@@ -25,7 +25,7 @@ import { UserModule } from './user/user.module';
     UserModule,
     AppRoutingModule
   ],
-  declarations: [
+declarations: [
     AppComponent,
     ShellComponent,
     MenuComponent,
