@@ -34,7 +34,12 @@ export class ProductListComponent implements OnInit {
     toggleImage(): void {
         this.showImage = !this.showImage;
     }
-
+    onFilterChange(message: string): void
+    {
+        this.listFilter =message;
+        console.log(`Added console in filer change ${this.listFilter}`);
+        this.performFilter( this.listFilter);
+    }
     performFilter(filterBy?: string): void {
         if (filterBy) {
             this.filteredProducts = this.products.filter((product: IProduct) =>
